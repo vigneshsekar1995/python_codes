@@ -1,0 +1,41 @@
+import os
+
+def rename_files():
+##    k=''
+##    d=[]
+##    file_list=os.listdir(r"C:\Users\Administrator\Desktop\Python\prank\prank")
+##
+##    for i in file_list:
+##        for s in i:
+##           if s.isdigit():
+##              k=k+''
+##           else:
+##              k=k+s
+##        d.append(k)
+##        k=''
+##    print(file_list)
+
+##
+    saved_path=os.getcwd()
+    os.chdir(r"C:\Users\Administrator\Desktop\Python\prank\prank")
+    for i in os.listdir(r"C:\Users\Administrator\Desktop\Python\prank\prank"):
+        k=''
+        for s in i:
+          if s.isdigit():
+              k=k+''
+          else:
+              k=k+s
+        os.rename(i,k)
+    os.chdir(saved_path)
+
+
+rename_files()
+
+
+
+
+
+
+##s = '12abcd405'
+##result = ''.join([i for i in s if not i.isdigit()])
+##print(result)
